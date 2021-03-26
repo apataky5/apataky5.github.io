@@ -42,7 +42,10 @@ a:hover {background-color: hsl(266, 82%, 62%);}
 a:focus{ text-decoration: underline wavy;
   background-color: hsl(266, 82%, 62%);
 }
-.current{ text-transform: uppercase}
+a.current{ text-transform: uppercase;
+  background-color: purple;
+
+}
 
   /* Okay time for header 1 */
 
