@@ -317,7 +317,18 @@ li a {
     background-color:  hsl(266, 82%, 62%);
     color:black;
   }
+  ul {
+    border: 1px solid black;
+  }
   
+  li {
+    text-align: center;
+    border-bottom: 1px solid black;
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }
 
   img{ width:100%}
 
@@ -337,7 +348,11 @@ li a {
   column-gap: 10px;
   align-self: auto;
 }
-
+.wilde {
+  grid-row: 1;
+}
+.irish {grid-row: 2;}
+.wordy{ grid-row:3;}
 .work{
   display: grid;
   grid-template-columns: auto;
@@ -353,6 +368,7 @@ li a {
     row-gap: 5px;
     column-gap: 5 px;
     align-self: auto;
+    overflow: auto;
   }
 
   .finn, .edgar{
