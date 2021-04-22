@@ -335,6 +335,7 @@ overflow: auto;
 .booky > img {
   max-width: 25%;
   min-width: 10%;
+  height: auto;
   border: double hsl(266, 82%, 62%) 8px;
   border-radius: 50px;
   align-self: auto;
@@ -426,6 +427,12 @@ overflow: auto;
   .wordy{
     grid-row:4;
     margin: 10px}
+  
+  .booky {
+    display: flex;
+    flex-wrap: wrap-reverse;
+
+  }
 
   .pro{
       display:grid;
@@ -510,7 +517,7 @@ overflow: auto;
   .booky {
 
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-flow: column-reverse;
     }
   
 
