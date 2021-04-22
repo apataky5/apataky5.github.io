@@ -333,13 +333,12 @@ align-self: auto;
 overflow: auto;
 }
 .booky > img {
-  max-width: 25%;
-  min-width: 10%;
-  height: auto;
-  border: double hsl(266, 82%, 62%) 8px;
-  border-radius: 50px;
-  align-self: auto;
-  margin: 20px;
+ min-width: 39%;
+ max-width: 40%;
+ border: double hsl(266, 82%, 62%) 8px;
+ border-radius: 50px;
+ align-self: auto;
+ margin: 20px;
 }
 .booky {
   display: flex;
@@ -518,6 +517,8 @@ overflow: auto;
 
     display: flex;
     flex-flow: column-reverse;
+    align-content: center;
+
     }
   
 
