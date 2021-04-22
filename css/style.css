@@ -27,17 +27,6 @@ body{
 }
 
 
-/* header{
-    background-attachment: fixed;     
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;      
-    color: black;
-    height: 400px;                     
-    margin-bottom:25px;
-    background-image:  url('../imgs/');
-} */
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -52,8 +41,9 @@ nav li{
   }
 nav a{
     color: black;
-    font-weight: bold;
+    font-weight: 300;
     text-decoration: none;
+    padding: 3%;
   }
 nav {
   margin-bottom: 50px;
@@ -64,9 +54,10 @@ a:focus{ text-decoration: underline;
   background-color: hsl(266, 82%, 62%);
 }
 a.current{ text-transform: uppercase;
-  background-color: lightgoldenrodyellow;
+  background-color:antiquewhite;
   color: purple;
   border: solid purple 10px;
+  font-weight: bold;
 }
 
 .woah { margin: 50pt;
@@ -91,7 +82,7 @@ h2{
   }
 footer{
   background-color:lightskyblue;
-  margin-top: 50px;
+  margin-top: 50px;   
 }
 footer > h1 {
   font-size: 18pt;
@@ -139,6 +130,7 @@ border: solid 2px; }
 
 
   .pig > img {
+    min-width:50%;
     max-width: 75%;
     height: auto;
     border: double hsl(266, 82%, 62%) 8px;
@@ -148,8 +140,64 @@ border: solid 2px; }
     grid-row: 1 / 4;
     grid-column: 2;
   }
+  body {
+    display: table;
+    width: 100%; 
+  }
+  
+  body > footer {
+     display: table-row;
+  }
 
+  /* This is for the flip card */
+ /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
 
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: lightskyblue;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: lightskyblue;
+  color: black;
+  transform: rotateY(180deg);
+}
 
 /* This is code just for the travel page */
   .container{
@@ -184,7 +232,7 @@ border: solid 2px; }
 }
 
 .container p {
-background-color: lightgoldenrodyellow;
+background-color:white;
 padding: 5pt 10pt 5pt 10pt;
 text-align: left;
 max-height: 100pt;
@@ -223,22 +271,7 @@ grid-row: 11;
  padding-bottom: 15pt;
  text-align: center;
 }
-/* img:nth-child(3n){
-	transform:rotate(-30deg);
-}
 
-img:nth-child(2n){
-	transform:rotate(30deg);
-}
-
-img:nth-child(4n){
-	transform:rotate(15deg);
-}
-
-
-img:active{
-	transform:rotate(0deg);
-} */
 
 
 @keyframes slidein { 
@@ -253,35 +286,6 @@ img:active{
   }
 }
 
-/* @media all and (min-width: 880px){
-    
-  img{
-     width:100%;
-  }
-  
-  nav{
-    padding: 30px 0px;
-    text-align: right;
-  }
-
-  .container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-
-@media all and (min-width:667px){
-	div{
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
-@media all and (min-width:900px){
-	div{
-		grid-template-columns: 1fr 1fr;
-	}
-} 
-} */
 
 @media all and (prefers-reduced-motion:reduce){
 	
@@ -292,6 +296,7 @@ img:active{
 	img:hover{
 		border-radius: 0px
 	}
+  .parallax{ visibility: hidden;}
 }
 
 
@@ -301,7 +306,7 @@ img:active{
   display: grid;
   grid-template-columns: 1fr 1 fr;
   grid-template-rows: 100px 500px;
-  row-gap: 20px;
+  row-gap: 75px;
   column-gap: 20px;
   align-self: auto;
   margin: 50pt;
@@ -313,21 +318,23 @@ img:active{
 
 .book > img{
   grid-row: 2;
-  max-height: 100%;
+  max-height: 125%;
   max-width: 100%;
+  min-width: 50%;
   border: double hsl(266, 82%, 62%) 8px;
   border-radius: 50px;
   align-self: center;
 }
 
 .book > p {
-max-width: 75%;
+max-width: 100%;
+min-width: 50%;
 align-self: auto;
 overflow: auto;
 }
 .booky > img {
-  height: auto;
   max-width: 25%;
+  min-width: 10%;
   border: double hsl(266, 82%, 62%) 8px;
   border-radius: 50px;
   align-self: auto;
@@ -338,7 +345,11 @@ overflow: auto;
   flex-wrap: wrap;
   justify-content: center;
 }
-  
+
+.info {
+margin-bottom:5%;
+text-align: center;
+}
   /* for crochet page */
 .pro{
   display:grid;
@@ -353,6 +364,7 @@ overflow: auto;
 
 .pro > img{
   max-width: 75%;
+  min-width: 50%;
   height: auto;
   border: double hsl(266, 82%, 62%) 8px;
   border-radius: 50px;
@@ -360,12 +372,81 @@ overflow: auto;
 }
 
 .pro > p{
-background-color: lightgoldenrodyellow;
+background-color:white;
 max-width: 75%;
 height: 50%;
 padding: 5pt 10pt 5pt 10pt;
 overflow: auto;
 }
+
+ /* tablet view */
+ @media only screen and (max-width: 801px) {
+   
+  nav li{
+    display:inline;
+    padding-left:20px;
+   }
+    nav a{
+        color: purple;
+        font-weight: 400;
+        text-decoration: underline;
+        padding: 0pt;
+      }
+  
+      a.current{ text-transform: uppercase;
+      color: black;
+      border: none;}
+      
+    
+    h1 { margin: 50pt;
+      color: purple;
+    }
+    h2 { color: purple;
+    margin: 25px}
+    p {color: purple;
+    overflow: auto;}
+   
+  
+    .book{ 
+      display: grid;
+      grid-template-columns: 600px;
+      grid-template-rows: 200px;
+      row-gap: 5px;
+      align-self: center;
+      column-gap: 0px;
+    }
+    .wilde {
+      grid-row: 1/span 2;
+    }
+  .irish {
+  grid-row: 2;
+  grid-column: 1;
+  align-self: auto;}
+  
+  .wordy{
+    grid-row:4;
+    margin: 10px}
+
+  .pro{
+      display:grid;
+      grid-template-columns: auto auto;
+      grid-row:auto auto auto auto;
+      row-gap: 50px;
+      column-gap: 50px;
+      align-self: auto;
+      }
+
+    .finn, .edgar{
+      grid-row: 1;
+    }
+    .wedgar, .wfinn {grid-row:2;}
+    .granny, .mum { grid-row: 3;}
+    .wgranny,.wmum {grid-row: 4;}
+    .mush, .hat {grid-row: 5;}
+    .wmush, .what {grid-row: 6;}
+  }
+  
+
 
 /* for phones */
 
@@ -377,6 +458,17 @@ overflow: auto;
   margin: 25px}
   p {color: darkblue;
   overflow: auto;}
+ 
+  a.current{ text-transform: uppercase;
+    color: purple;
+    background-color: lightskyblue;
+    font-weight: bolder;
+  }
+  nav a{
+    color: darkblue;
+    font-weight: 400;
+    text-decoration: underline;
+  }
   
   li a {
         display: block;
@@ -411,102 +503,55 @@ overflow: auto;
   
   
   .book{ 
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    row-gap: 10px;
-    column-gap: 10px;
-    align-self: auto;
+    display: flex;
+    flex-flow: column;
+
   }
-  .wilde {
-    grid-row: 1;
-  }
-  .irish {grid-row: 2;}
-  .wordy{ grid-row:3;
-  margin: 10px}
-.booky {
-  display: flex;
-  flex-wrap: wrap-reverse;
+  .booky {
+
+    display: flex;
+    flex-wrap: wrap-reverse;
     }
+  
 
   .work{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    row-gap: 10px;
-    column-gap: 10 px;
-     
+    display: flex;
+    flex-flow: column;
     }
-  .pro{
-    display:grid;
-    grid-template-columns: auto auto;
-    grid-row:auto auto auto auto;
-    row-gap: 50px;
-    column-gap: 50px;
-    align-self: auto;
-    }
+
   /* .pro > img {
     height: 100%;
     max-width: 100%; 
   } */
-  
-    .finn, .edgar{
+  .woah > h1 {
+    margin: 0;
+  }
+  .woah > h2 {
+    margin: 0;
+  }
+  .pro{
+    display:grid;
+    grid-template-columns: 100%;
+    grid-row:auto;
+    row-gap: 10px;
+    align-self: auto;
+    }
+
+  .edgar{
       grid-row: 1;
     }
-    .wedgar, .wfinn {grid-row:2;}
-    .granny, .mum { grid-row: 3;}
-    .wgranny,.wmum {grid-row: 4;}
-    .mush, .hat {grid-row: 5;}
-    .wmush, .what {grid-row: 6;}
+    .finn{grid-row: 3}
+    .wedgar {grid-row:2;}
+    .wfinn{grid-row: 4;}
+    .granny { grid-row: 5;}
+    .mum{grid-row: 7;}
+    .wgranny {grid-row: 6;}
+    .wmum {grid-row: 8;}
+    .mush {grid-row: 9;}
+    .hat{ grid-row: 11;}
+    .wmush {grid-row: 10;}
+    .what {grid-row: 12;}
   }
 
 
-
-
- /* tablet view */
-@media only screen and (max-width: 801px) {
-   
-nav li{
-  display:inline;
-  padding-right:20px;
- }
-  nav a{
-      color: black;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-    
-  
-  h1 { margin: 50pt;
-    color: purple;
-  }
-  h2 { color: purple;
-  margin: 25px}
-  p {color: purple;
-  overflow: auto;}
- 
-
-  .book{ 
-    display: grid;
-    grid-template-columns: 600px;
-    grid-template-rows: 200px;
-    row-gap: 5px;
-    align-self: center;
-    column-gap: 0px;
-  }
-  .wilde {
-    grid-row: 1/span 2;
-  }
-.irish {
-grid-row: 2;
-grid-column: 1;
-align-self: auto;}
-
-.wordy{
-  grid-row:4;
-  margin: 10px}
-
-
-
-}
 

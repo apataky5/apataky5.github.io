@@ -1,9 +1,36 @@
+
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  background-image:url(../imgs/stone.JPG);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-width:600px) {
+  .parallax {
+    background-image: none;
+    background-color: lavenderblush;
+
+   }
+}
+
+p{ 
+  background-color: lavenderblush;
+  margin: 10%;
+  padding: 3%;
+}
 fieldset {
-  margin:10px
+  margin:10px;
 }
 form {
   border: 2px groove hsl(266, 82%, 62%);
   margin: 100px;
+  background-color: lavenderblush;
 }
 
 legend{ 
@@ -11,6 +38,7 @@ legend{
   font-style:italic;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 5%;
 }
 
 label{
@@ -18,6 +46,7 @@ label{
   margin-right:10px;
   width:15%;
 }
+
 input {
   width: 100%;
   padding: 12px 20px;
@@ -59,16 +88,16 @@ input[type=submit]:hover {
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (min-width: 770px) {
   form{
-    width: 80%;
+    max-width: 80%;
     margin: 0 auto;
   }
 
   input{
-    width:80%;
+    max-width: 80%;
   }
 
   textarea{
-    width:80%;
+    max-width: 80%;
     height: 25vh;
  }
 }
