@@ -54,13 +54,13 @@ input {
   margin: 8px 0;
   display: inline-block;
   border: 3px groove hsl(266, 82%, 62%);
-  background-color: lightgoldenrodyellow;
+  background-color: white;
   box-sizing: border-box;
 }
 
 textarea{
   border: 2px groove hsl(266, 82%, 62%);
-  background-color: lightgoldenrodyellow;
+  background-color: white;
 }
 
 
