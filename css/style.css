@@ -82,13 +82,13 @@ h2{
   }
 footer{
   background-color:lightskyblue;
-  margin-top: 50px;   
+  margin-top: 5%;   
 }
 footer > h1 {
   font-size: 18pt;
   color: black;
   font-weight: normal;
-  padding: 15px;
+  padding: 5%;
   text-align: center;
 }
 

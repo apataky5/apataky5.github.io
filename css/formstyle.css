@@ -4,7 +4,7 @@ body, html {
 }
 
 .parallax {
-  background-image:url(../imgs/stone.JPG);
+  background-image:url(../imgs/grouse.jpg);
   height: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -24,6 +24,7 @@ p{
   margin: 10%;
   padding: 3%;
 }
+.room {margin-bottom: 5%;}
 fieldset {
   margin:10px;
 }
