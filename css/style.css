@@ -296,7 +296,7 @@ grid-row: 11;
 	img:hover{
 		border-radius: 0px
 	}
-  .parallax{ visibility: hidden;}
+  .parallax{ background-attachment: fixed;}
 }
 
 
