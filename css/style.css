@@ -297,6 +297,10 @@ grid-row: 11;
 		border-radius: 0px
 	}
   .parallax{ background-attachment: fixed;}
+
+  .flip-card { transform: none;}
+
+  .book > img { animation: none;}
 }
 
 
@@ -340,6 +344,19 @@ overflow: auto;
  align-self: auto;
  margin: 20px;
 }
+
+@keyframes example {
+  from {filter: grayscale(5);}
+  to {filter:none;}
+}
+
+/* The element to apply the animation to */
+.book > img {
+  filter: grayscale(0);
+  animation-name: example;
+  animation-duration: 6s;
+}
+
 .booky {
   display: flex;
   flex-wrap: wrap;
