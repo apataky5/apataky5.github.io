@@ -12,11 +12,7 @@ body, html {
   background-size: cover;
 }
 @media only screen and (max-width:600px) {
-  .parallax {
-    background-image: none;
-    background-color: lavenderblush;
-
-   }
+  .parallax { background-attachment: fixed;}
 }
 
 p{ 
